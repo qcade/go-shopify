@@ -68,6 +68,7 @@ type Client struct {
 	Redirect                   RedirectService
 	Page                       PageService
 	StorefrontAccessToken      StorefrontAccessTokenService
+	Checkout                   CheckoutService
 }
 
 // A general response error that follows a similar layout to Shopify's response
@@ -203,6 +204,7 @@ func NewClient(app App, shopName, token string) *Client {
 	c.Redirect = &RedirectServiceOp{client: c}
 	c.Page = &PageServiceOp{client: c}
 	c.StorefrontAccessToken = &StorefrontAccessTokenServiceOp{client: c}
+	c.Checkout = &CheckoutServiceOp{client: c}
 
 	return c
 }

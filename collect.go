@@ -10,8 +10,8 @@ type CollectListOptions struct {
 	Page         int    `url:"page,omitempty"`
 	Limit        int    `url:"limit,omitempty"`
 	SinceID      int    `url:"since_id,omitempty"`
-	CollectionID int    `url:"collection_id"`
-	ProductID    int    `url:"product_id,omitempty"`
+	CollectionID int64  `url:"collection_id"`
+	ProductID    int64  `url:"product_id,omitempty"`
 	Fields       string `url:"fields,omitempty"`
 	Order        string `url:"collect,omitempty"`
 }
